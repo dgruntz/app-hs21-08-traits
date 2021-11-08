@@ -9,10 +9,6 @@ trait ConsoleLogger {
   def log(msg: String): Unit = { println(s"$c: $msg"); c += 1 }
 }
 
-trait Cloneable {
-  protected def clone(): Object
-}
-
 class Account(private var bal: Double = 0) {
   val id = Account.newUniqueNumber()
   def deposit(amount: Double): Unit = { bal += amount }
